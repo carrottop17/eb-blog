@@ -2,3 +2,12 @@
 body {
   background-color: orange;
 }
+/* line 3, ../compass/sass/styles.scss */
+body .navbar {
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+/* line 6, ../compass/sass/styles.scss */
+body .navbar .navbar-right {
+  margin-right: 5px;
+}
