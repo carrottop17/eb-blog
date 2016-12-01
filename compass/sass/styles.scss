@@ -1,10 +1,26 @@
 body{
-	background-color: orange;
+	color: #263D42 !important;
+	background-color: #80CED7;
 	.navbar{
-		margin: 10px;
-		background-color: rgba(255, 255, 255, 0.7);
+		margin-top: 10px;
+		background-color: #CCDBDC;
+		border: solid 1px #fff;
 		.navbar-right{
 			margin-right: 5px;
 		}
+		.btn-info,
+		.btn-info:active,
+		.btn-info:visited,
+		.btn-info:focus {
+			background-color: #63C7B2;
+			border-color: #63C7B2;
+		}
+		.btn-info:hover{
+			background-color: #59B29F
+		}
+	}
+	.jumbotron{
+		background-color: #CCDBDC;
+		border: solid 1px #fff;
 	}
 }

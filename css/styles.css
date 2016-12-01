@@ -1,13 +1,32 @@
 /* line 1, ../compass/sass/styles.scss */
 body {
-  background-color: orange;
+  color: #263D42 !important;
+  background-color: #80CED7;
 }
-/* line 3, ../compass/sass/styles.scss */
+/* line 4, ../compass/sass/styles.scss */
 body .navbar {
-  margin: 10px;
-  background-color: rgba(255, 255, 255, 0.7);
+  margin-top: 10px;
+  background-color: #CCDBDC;
+  border: solid 1px #fff;
 }
-/* line 6, ../compass/sass/styles.scss */
+/* line 8, ../compass/sass/styles.scss */
 body .navbar .navbar-right {
   margin-right: 5px;
+}
+/* line 11, ../compass/sass/styles.scss */
+body .navbar .btn-info,
+body .navbar .btn-info:active,
+body .navbar .btn-info:visited,
+body .navbar .btn-info:focus {
+  background-color: #63C7B2;
+  border-color: #63C7B2;
+}
+/* line 18, ../compass/sass/styles.scss */
+body .navbar .btn-info:hover {
+  background-color: #59B29F;
+}
+/* line 22, ../compass/sass/styles.scss */
+body .jumbotron {
+  background-color: #CCDBDC;
+  border: solid 1px #fff;
 }
