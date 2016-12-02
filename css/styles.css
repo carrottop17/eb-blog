@@ -30,3 +30,15 @@ body .jumbotron {
   background-color: #CCDBDC;
   border: solid 1px #fff;
 }
+/* line 25, ../compass/sass/styles.scss */
+body .jumbotron .header {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 29, ../compass/sass/styles.scss */
+body .jumbotron img {
+  border-radius: 50%;
+  width: 200px;
+  border: solid 1px #fff;
+  margin-right: 30px;
+}

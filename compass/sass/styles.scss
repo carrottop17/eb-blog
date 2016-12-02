@@ -22,5 +22,15 @@ body{
 	.jumbotron{
 		background-color: #CCDBDC;
 		border: solid 1px #fff;
+		.header{
+			display: inline-block;
+			vertical-align: middle;
+		}
+		img{
+			border-radius: 50%;
+			width: 200px;
+			border: solid 1px #fff;
+			margin-right: 30px;
+		}
 	}
 }
