@@ -1,0 +1,20 @@
+{
+  "name": "eb_blog",
+  "version": "1.0.0",
+  "description": "blog site",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carrottop17/eb-blog.git"
+  },
+  "author": "Daniel Barranco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carrottop17/eb-blog/issues"
+  },
+  "homepage": "https://github.com/carrottop17/eb-blog#readme"
+}
