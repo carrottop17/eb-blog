@@ -1,9 +1,9 @@
-<div class="row">
+<div class="row" ng-controller="wysiwygeditor">
 	<div class="col-lg-12 col-md-12">
-		<form ng-controller="wysiwygeditor" class="container app">
+		<form ng-controller="mainController" class="container app" ng-submit="newBlogPost()">
 		  <div class="form-group">
-		  	<label for="blogPost">New Blog Post</label>
-		    <textarea class="form-control" rows="5"></textarea>
+		  	<!-- <label for="blogPost">New Blog Post</label>
+		    <textarea class="form-control" rows="5"></textarea> -->
 		  </div>
 
 		  <h1>Editor <span>{{version}}</span></h1>

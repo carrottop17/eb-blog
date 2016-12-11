@@ -1,8 +1,23 @@
 var ebBlog = angular.module("ebBlog", ['ngRoute', 'ngCookies', 'textAngular']);
-ebBlog.controller('mainController', function($scope, $route, $http, $cookies){
-	$scope.test = "This is the main page"
-	$scope.newpost = "This is the new post page"
+var apiPath = "http://localhost:3003";
 
+ebBlog.controller('mainController', function($scope, $route, $http, $cookies, $location){
+	$scope.test = "This is the main page"
+	
+	$scope.newBlogPost = function(){
+		$http.post(apiPath + '/newBlogPost', {
+			blogPost: $scope.htmlVariable
+		}).then(function successCallback(response){
+			console.log(response);
+			if(response.data.message == 'added'){
+				$location.path('/');
+				console.log(response.data);
+			}
+		},function errorCallback(response){
+			console.log('error');
+			console.log(response);
+		});
+	};
 });
 
 ebBlog.controller('wysiwygeditor', ['$scope', 'textAngularManager', function wysiwygeditor($scope, textAngularManager) {
