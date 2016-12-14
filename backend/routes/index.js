@@ -33,7 +33,7 @@ router.get('/', function(req, res, next){
 					res.json({failure: 'badToken'});
 				}else{
 					res.json({
-						blogPost: document.blogPost
+						blogPost: document
 					});
 				}
 

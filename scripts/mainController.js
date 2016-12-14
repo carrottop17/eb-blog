@@ -33,9 +33,9 @@ ebBlog.controller('mainController', function($scope, $route, $http, $cookies, $l
 	// };
 
 	$scope.getBlogs = function(){
-		$http.get(apiPath + '/').then(function successCallback(response){
+		$http.get(apiPath).then(function successCallback(response){
 			$scope.blogPost = response.data.blogPost;
-			console.log(response.data);
+			console.log(response.data.blogPost);
 			// if(response.data.message == 'added'){
 			// 	$location.path('/');
 			// 	console.log(response.data);
