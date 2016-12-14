@@ -20,4 +20,25 @@ router.post('/newBlogPost', function(req, res, next) {
 	});
 });
 
+router.get('/', function(req, res, next){
+	// var userToken = req.query.token;
+	// if(userToken == undefined){
+	// 	//No token was supplied
+	// 	res.json({failure: "noToken"});
+	// }else{
+		BlogPost.find(
+			function(error, document){
+				console.log(document);
+				if(document == null){
+					res.json({failure: 'badToken'});
+				}else{
+					res.json({
+						blogPost: document.blogPost
+					});
+				}
+
+			}
+		)
+});
+
 module.exports = router;

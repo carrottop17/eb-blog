@@ -18,6 +18,33 @@ ebBlog.controller('mainController', function($scope, $route, $http, $cookies, $l
 			console.log(response);
 		});
 	};
+
+	// $scope.getBlogs = function(){
+	// 	$http.get(apiPath + '/getUserData?token=' + $cookies.get('token')).then(function successCallback(response){
+	// 		if (response.data.failure == 'noToken' || response.data.failure == 'badToken'){
+	// 			$location.path('/login');
+	// 			console.log(response.data);
+	// 		} else {
+	// 			$scope.blogPost = response.data.blogPost;
+	// 		}
+	// 	}, function errorCallback(response){
+	// 		console.log(response.status);
+	// 	});
+	// };
+
+	$scope.getBlogs = function(){
+		$http.get(apiPath + '/').then(function successCallback(response){
+			$scope.blogPost = response.data.blogPost;
+			console.log(response.data);
+			// if(response.data.message == 'added'){
+			// 	$location.path('/');
+			// 	console.log(response.data);
+			// }
+		},function errorCallback(response){
+			console.log('error');
+			console.log(response);
+		});		
+	};
 });
 
 ebBlog.controller('wysiwygeditor', ['$scope', 'textAngularManager', function wysiwygeditor($scope, textAngularManager) {
