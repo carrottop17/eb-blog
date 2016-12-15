@@ -46,3 +46,11 @@ body .jumbotron img {
 body .container {
   padding-left: 0px;
 }
+/* line 39, ../compass/sass/styles.scss */
+body .blogs {
+  background-color: #fff;
+  border: solid 1px #8E6C88;
+  border-radius: 5px;
+  margin: 20px 0px;
+  padding: 20px;
+}
