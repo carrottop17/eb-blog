@@ -45,6 +45,19 @@ ebBlog.controller('mainController', function($scope, $route, $http, $cookies, $l
 			console.log(response);
 		});		
 	};
+
+	$scope.deleteBlog = function(results){
+		console.log(results.date);
+		$http.post(apiPath + '/deleteBlog', {
+			results: results,
+			// token: $cookies.get('token')
+		}).then(function successCallback(response){
+			$scope.getBlogs();
+			console.log(response);
+		}, function errorCallback(response){
+			console.log(response.data);
+		});
+	};
 });
 
 ebBlog.controller('wysiwygeditor', ['$scope', 'textAngularManager', function wysiwygeditor($scope, textAngularManager) {

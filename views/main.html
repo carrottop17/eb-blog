@@ -1,5 +1,7 @@
-<div ng-init="getBlogs()" ng-hide="onLoad">
-	<div ng-repeat="blog in blogPost" class="blogs">
+<div ng-init="getBlogs()">
+	<div ng-repeat="blog in blogPost | orderBy: 'date':true" class="blogs">
 		<p ng-bind-html="blog.blogPost"></p>
+		<p>{{blog.date | date:'medium'}}</p>
+		<button class="btn btn-danger" ng-click="deleteBlog(blog)">Delete</button>
 	</div>
 </div>

@@ -20,6 +20,15 @@ router.post('/newBlogPost', function(req, res, next) {
 	});
 });
 
+// router.get('/', function (req, res) {
+// 	console.log('home');
+//   	res.redirect('https://expressjs.com/en/guide/routing.html');
+// });
+
+// router.get('/about', function (req, res) {
+//   res.send('about')
+// });
+
 router.get('/', function(req, res, next){
 	// var userToken = req.query.token;
 	// if(userToken == undefined){
@@ -39,6 +48,20 @@ router.get('/', function(req, res, next){
 
 			}
 		)
+});
+
+router.post('/deleteBlog', function(req, res, next) {
+	BlogPost.remove(
+		// {token: req.body.token},
+		{date: req.body.results.date},
+		function(err, numberAffected){
+			if(numberAffected.ok == 1){
+				res.json({success: "updated"});
+			}else{
+				res.json({failure: "failedUpdate"});
+			};
+		}
+	);
 });
 
 module.exports = router;
