@@ -1,3 +1,7 @@
 <div ng-init="getBlogs()" ng-hide="onLoad">
+	<div ng-repeat="blog in blogPost">
+		<p ng-bind-html="blog.blogPost"></p>
+		<!-- {{blog.blogPost}} -->
+	</div>
 {{test}}
 </div>

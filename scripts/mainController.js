@@ -1,4 +1,4 @@
-var ebBlog = angular.module("ebBlog", ['ngRoute', 'ngCookies', 'textAngular']);
+var ebBlog = angular.module("ebBlog", ['ngRoute', 'ngCookies', 'ngSanitize', 'textAngular']);
 var apiPath = "http://localhost:3003";
 
 ebBlog.controller('mainController', function($scope, $route, $http, $cookies, $location){
@@ -35,7 +35,7 @@ ebBlog.controller('mainController', function($scope, $route, $http, $cookies, $l
 	$scope.getBlogs = function(){
 		$http.get(apiPath).then(function successCallback(response){
 			$scope.blogPost = response.data.blogPost;
-			console.log(response.data.blogPost);
+			console.log($scope.blogPost);
 			// if(response.data.message == 'added'){
 			// 	$location.path('/');
 			// 	console.log(response.data);
