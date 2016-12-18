@@ -52,7 +52,6 @@ router.get('/', function(req, res, next){
 
 router.post('/deleteBlog', function(req, res, next) {
 	BlogPost.remove(
-		// {token: req.body.token},
 		{date: req.body.results.date},
 		function(err, numberAffected){
 			if(numberAffected.ok == 1){

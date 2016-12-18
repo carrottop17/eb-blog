@@ -4,6 +4,29 @@ var apiPath = "http://localhost:3003";
 ebBlog.controller('mainController', function($scope, $route, $http, $cookies, $location){
 	$scope.test = "This is the main page"
 	
+	
+
+	$scope.login = function(){
+		console.log(username);
+		console.log($scope.username);
+		if($scope.username == username && $scope.password == password){
+			$cookies.put('username', $scope.username);
+			console.log('username match');
+			$scope.signedIn();
+		}else{
+			console.log('username not match');
+		}
+	};
+
+	$scope.signedIn = function(){
+		$scope.user = $cookies.get('username');
+		
+		if($scope.user == username){
+			$scope.loggedIn = true;
+		};
+		$scope.getBlogs();
+	}
+	
 	$scope.newBlogPost = function(){
 		$http.post(apiPath + '/newBlogPost', {
 			blogPost: $scope.htmlVariable
@@ -36,10 +59,6 @@ ebBlog.controller('mainController', function($scope, $route, $http, $cookies, $l
 		$http.get(apiPath).then(function successCallback(response){
 			$scope.blogPost = response.data.blogPost;
 			console.log($scope.blogPost);
-			// if(response.data.message == 'added'){
-			// 	$location.path('/');
-			// 	console.log(response.data);
-			// }
 		},function errorCallback(response){
 			console.log('error');
 			console.log(response);
