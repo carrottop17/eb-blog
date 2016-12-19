@@ -54,3 +54,7 @@ body .blogs {
   margin: 20px 0px;
   padding: 20px;
 }
+/* line 46, ../compass/sass/styles.scss */
+body .navbar-form {
+  padding-right: 0px;
+}

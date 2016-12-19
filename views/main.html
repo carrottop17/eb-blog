@@ -2,6 +2,6 @@
 	<div ng-repeat="blog in blogPost | orderBy: 'date':true" class="blogs">
 		<p ng-bind-html="blog.blogPost"></p>
 		<p>{{blog.date | date:'medium'}}</p>
-		<button class="btn btn-danger" ng-click="deleteBlog(blog)">Delete</button>
+		<button class="btn btn-danger" ng-click="deleteBlog(blog)" ng-if="loggedIn === true">Delete</button>
 	</div>
 </div>

@@ -2,10 +2,7 @@ var ebBlog = angular.module("ebBlog", ['ngRoute', 'ngCookies', 'ngSanitize', 'te
 var apiPath = "http://localhost:3003";
 
 ebBlog.controller('mainController', function($scope, $route, $http, $cookies, $location){
-	$scope.test = "This is the main page"
 	
-	
-
 	$scope.login = function(){
 		console.log(username);
 		console.log($scope.username);
@@ -20,13 +17,19 @@ ebBlog.controller('mainController', function($scope, $route, $http, $cookies, $l
 
 	$scope.signedIn = function(){
 		$scope.user = $cookies.get('username');
-		
 		if($scope.user == username){
 			$scope.loggedIn = true;
-		};
-		$scope.getBlogs();
-	}
+		}else{
+			$scope.loggedIn = false;
+			$location.path('/');
+		}
+	};
 	
+	$scope.logout = function(){
+		$cookies.remove('username');
+		$scope.signedIn();
+	}
+
 	$scope.newBlogPost = function(){
 		$http.post(apiPath + '/newBlogPost', {
 			blogPost: $scope.htmlVariable
