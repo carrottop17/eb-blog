@@ -62,8 +62,32 @@ body .blogs {
 body .navbar-form {
   padding-right: 0px;
 }
+/* line 52, ../compass/sass/styles.scss */
+body .blog-title {
+  text-align: center;
+}
+/* line 55, ../compass/sass/styles.scss */
+body form {
+  text-align: center;
+}
+/* line 58, ../compass/sass/styles.scss */
+body .post {
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
 
-/* line 54, ../compass/sass/styles.scss */
+/* line 64, ../compass/sass/styles.scss */
+.btn-toolbar > .btn-group {
+  float: none;
+  margin-bottom: 10px;
+}
+
+/* line 68, ../compass/sass/styles.scss */
+.ta-toolbar {
+  text-align: center;
+}
+
+/* line 72, ../compass/sass/styles.scss */
 .rw-words-1 span {
   position: absolute;
   opacity: 0;
@@ -73,21 +97,21 @@ body .navbar-form {
   animation: rotateWord 16s linear infinite 0s;
 }
 
-/* line 62, ../compass/sass/styles.scss */
+/* line 80, ../compass/sass/styles.scss */
 .rw-words-1 span:nth-child(2) {
   -webkit-animation-delay: 4s;
   -ms-animation-delay: 4s;
   animation-delay: 4s;
 }
 
-/* line 67, ../compass/sass/styles.scss */
+/* line 85, ../compass/sass/styles.scss */
 .rw-words-1 span:nth-child(3) {
   -webkit-animation-delay: 8s;
   -ms-animation-delay: 8s;
   animation-delay: 8s;
 }
 
-/* line 72, ../compass/sass/styles.scss */
+/* line 90, ../compass/sass/styles.scss */
 .rw-words-1 span:nth-child(4) {
   -webkit-animation-delay: 12s;
   -ms-animation-delay: 12s;

@@ -49,6 +49,24 @@ body{
 	.navbar-form{
 		padding-right: 0px;
 	}
+	.blog-title{
+		text-align: center;
+	}
+	form{
+		text-align: center;
+	}
+	.post{
+		margin-top: 10px;
+		margin-bottom: 50px;
+	}
+}
+
+.btn-toolbar>.btn-group{
+	float: none;
+	margin-bottom: 10px;
+}
+.ta-toolbar{
+	text-align: center;
 }
 
 .rw-words-1 span{
