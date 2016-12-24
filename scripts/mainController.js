@@ -1,5 +1,5 @@
 var ebBlog = angular.module("ebBlog", ['ngRoute', 'ngCookies', 'ngSanitize', 'textAngular', 'angular-scroll-animate']);
-var apiPath = "http://localhost:3003";
+var apiPath = "http://danielbarranco:3003";
 
 ebBlog.controller('mainController', function($scope, $route, $http, $cookies, $location){
 
