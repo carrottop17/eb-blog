@@ -64,7 +64,7 @@ body .blogs {
   background-color: #fff;
   border: solid 1px #8E6C88;
   border-radius: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding: 20px;
 }
 /* line 55, ../compass/sass/styles.scss */
@@ -93,19 +93,23 @@ body .post {
   margin-top: 10px;
   margin-bottom: 50px;
 }
+/* line 76, ../compass/sass/styles.scss */
+body .not-visible {
+  visibility: hidden;
+}
 
-/* line 78, ../compass/sass/styles.scss */
+/* line 84, ../compass/sass/styles.scss */
 .btn-toolbar > .btn-group {
   float: none;
   margin-bottom: 10px;
 }
 
-/* line 82, ../compass/sass/styles.scss */
+/* line 88, ../compass/sass/styles.scss */
 .ta-toolbar {
   text-align: center;
 }
 
-/* line 86, ../compass/sass/styles.scss */
+/* line 92, ../compass/sass/styles.scss */
 .rw-words-1 span {
   position: absolute;
   opacity: 0;
@@ -115,21 +119,21 @@ body .post {
   animation: rotateWord 16s linear infinite 0s;
 }
 
-/* line 94, ../compass/sass/styles.scss */
+/* line 100, ../compass/sass/styles.scss */
 .rw-words-1 span:nth-child(2) {
   -webkit-animation-delay: 4s;
   -ms-animation-delay: 4s;
   animation-delay: 4s;
 }
 
-/* line 99, ../compass/sass/styles.scss */
+/* line 105, ../compass/sass/styles.scss */
 .rw-words-1 span:nth-child(3) {
   -webkit-animation-delay: 8s;
   -ms-animation-delay: 8s;
   animation-delay: 8s;
 }
 
-/* line 104, ../compass/sass/styles.scss */
+/* line 110, ../compass/sass/styles.scss */
 .rw-words-1 span:nth-child(4) {
   -webkit-animation-delay: 12s;
   -ms-animation-delay: 12s;

@@ -1,6 +1,6 @@
 <div ng-init="getBlogs()">
 	<div class="row">
-		<div ng-repeat="blog in blogPost | orderBy: 'date':true" class="blogs col-md-10 col-md-offset-1">
+		<div ng-repeat="blog in blogPost | orderBy: 'date':true" when-visible="animateElementIn" when-not-visible="animateElementOut" class="not-visible blogs col-md-10 col-md-offset-1">
 			<p class="date">{{blog.date | date:'medium'}}</p>
 			<button class="btn btn-danger delete-button" ng-click="deleteBlog(blog)" ng-if="loggedIn === true">Delete</button>
 			<p ng-bind-html="blog.blogPost"></p>

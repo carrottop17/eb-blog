@@ -1,7 +1,17 @@
-var ebBlog = angular.module("ebBlog", ['ngRoute', 'ngCookies', 'ngSanitize', 'textAngular']);
+var ebBlog = angular.module("ebBlog", ['ngRoute', 'ngCookies', 'ngSanitize', 'textAngular', 'angular-scroll-animate']);
 var apiPath = "http://localhost:3003";
 
 ebBlog.controller('mainController', function($scope, $route, $http, $cookies, $location){
+
+	    $scope.animateElementIn = function($el) {
+	    $el.removeClass('not-visible');
+	    $el.addClass('animated fadeInUp');
+	  };
+
+	  $scope.animateElementOut = function($el) {
+	    $el.addClass('not-visible');
+	    $el.removeClass('animated fadeInUp');
+	  };
 	
 	$scope.login = function(){
 		console.log(username);
