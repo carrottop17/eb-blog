@@ -5,6 +5,13 @@ body{
 		margin-top: 10px;
 		background-color: #CCDBDC;
 		border: solid 1px #fff;
+		.navbar-brand{
+			padding: 5px 5px;
+			.logo{
+				display: inline-block;
+				margin-right: 5px;
+			}
+		}
 		.navbar-right{
 			margin-right: 5px;
 		}
@@ -42,9 +49,16 @@ body{
 	.blogs{
 		background-color: #fff;
 		border: solid 1px #8E6C88;
-		border-radius: 5px;
-		margin: 20px 0px;
+		border-radius: 20px;
+		margin-bottom: 20px;
 		padding: 20px;
+		.date{
+			display: inline-block;
+		}
+		.delete-button{
+			display: inline-block;
+			float: right;
+		}
 	}
 	.navbar-form{
 		padding-right: 0px;
@@ -52,7 +66,7 @@ body{
 	.blog-title{
 		text-align: center;
 	}
-	form{
+	.post-button{
 		text-align: center;
 	}
 	.post{

@@ -10,10 +10,19 @@ body .navbar {
   border: solid 1px #fff;
 }
 /* line 8, ../compass/sass/styles.scss */
+body .navbar .navbar-brand {
+  padding: 5px 5px;
+}
+/* line 10, ../compass/sass/styles.scss */
+body .navbar .navbar-brand .logo {
+  display: inline-block;
+  margin-right: 5px;
+}
+/* line 15, ../compass/sass/styles.scss */
 body .navbar .navbar-right {
   margin-right: 5px;
 }
-/* line 11, ../compass/sass/styles.scss */
+/* line 18, ../compass/sass/styles.scss */
 body .navbar .btn-info,
 body .navbar .btn-info:active,
 body .navbar .btn-info:visited,
@@ -21,73 +30,82 @@ body .navbar .btn-info:focus {
   background-color: #63C7B2;
   border-color: #63C7B2;
 }
-/* line 18, ../compass/sass/styles.scss */
+/* line 25, ../compass/sass/styles.scss */
 body .navbar .btn-info:hover {
   background-color: #59B29F;
 }
-/* line 22, ../compass/sass/styles.scss */
+/* line 29, ../compass/sass/styles.scss */
 body .jumbotron {
   background-color: #CCDBDC;
   border: solid 1px #fff;
 }
-/* line 25, ../compass/sass/styles.scss */
+/* line 32, ../compass/sass/styles.scss */
 body .jumbotron .header {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 28, ../compass/sass/styles.scss */
+/* line 35, ../compass/sass/styles.scss */
 body .jumbotron .header p {
   margin-top: 100px;
 }
-/* line 32, ../compass/sass/styles.scss */
+/* line 39, ../compass/sass/styles.scss */
 body .jumbotron img {
   border-radius: 50%;
   width: 200px;
   border: solid 1px #fff;
   margin-right: 30px;
 }
-/* line 39, ../compass/sass/styles.scss */
+/* line 46, ../compass/sass/styles.scss */
 body .container {
   padding-left: 0px;
 }
-/* line 42, ../compass/sass/styles.scss */
+/* line 49, ../compass/sass/styles.scss */
 body .blogs {
   background-color: #fff;
   border: solid 1px #8E6C88;
-  border-radius: 5px;
-  margin: 20px 0px;
+  border-radius: 20px;
+  margin-bottom: 20px;
   padding: 20px;
 }
-/* line 49, ../compass/sass/styles.scss */
+/* line 55, ../compass/sass/styles.scss */
+body .blogs .date {
+  display: inline-block;
+}
+/* line 58, ../compass/sass/styles.scss */
+body .blogs .delete-button {
+  display: inline-block;
+  float: right;
+}
+/* line 63, ../compass/sass/styles.scss */
 body .navbar-form {
   padding-right: 0px;
 }
-/* line 52, ../compass/sass/styles.scss */
+/* line 66, ../compass/sass/styles.scss */
 body .blog-title {
   text-align: center;
 }
-/* line 55, ../compass/sass/styles.scss */
-body form {
+/* line 69, ../compass/sass/styles.scss */
+body .post-button {
   text-align: center;
 }
-/* line 58, ../compass/sass/styles.scss */
+/* line 72, ../compass/sass/styles.scss */
 body .post {
   margin-top: 10px;
   margin-bottom: 50px;
 }
 
-/* line 64, ../compass/sass/styles.scss */
+/* line 78, ../compass/sass/styles.scss */
 .btn-toolbar > .btn-group {
   float: none;
   margin-bottom: 10px;
 }
 
-/* line 68, ../compass/sass/styles.scss */
+/* line 82, ../compass/sass/styles.scss */
 .ta-toolbar {
   text-align: center;
 }
 
-/* line 72, ../compass/sass/styles.scss */
+/* line 86, ../compass/sass/styles.scss */
 .rw-words-1 span {
   position: absolute;
   opacity: 0;
@@ -97,21 +115,21 @@ body .post {
   animation: rotateWord 16s linear infinite 0s;
 }
 
-/* line 80, ../compass/sass/styles.scss */
+/* line 94, ../compass/sass/styles.scss */
 .rw-words-1 span:nth-child(2) {
   -webkit-animation-delay: 4s;
   -ms-animation-delay: 4s;
   animation-delay: 4s;
 }
 
-/* line 85, ../compass/sass/styles.scss */
+/* line 99, ../compass/sass/styles.scss */
 .rw-words-1 span:nth-child(3) {
   -webkit-animation-delay: 8s;
   -ms-animation-delay: 8s;
   animation-delay: 8s;
 }
 
-/* line 90, ../compass/sass/styles.scss */
+/* line 104, ../compass/sass/styles.scss */
 .rw-words-1 span:nth-child(4) {
   -webkit-animation-delay: 12s;
   -ms-animation-delay: 12s;
