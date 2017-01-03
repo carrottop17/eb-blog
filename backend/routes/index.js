@@ -13,31 +13,15 @@ router.post('/newBlogPost', function(req, res, next) {
 
 	blogPost.save(function(error, blog, documentAdded){
 		console.log(error);
-		console.log(blog)
 	});
 	res.json({
 		message: "added",
 	});
 });
 
-// router.get('/', function (req, res) {
-// 	console.log('home');
-//   	res.redirect('https://expressjs.com/en/guide/routing.html');
-// });
-
-// router.get('/about', function (req, res) {
-//   res.send('about')
-// });
-
 router.get('/', function(req, res, next){
-	// var userToken = req.query.token;
-	// if(userToken == undefined){
-	// 	//No token was supplied
-	// 	res.json({failure: "noToken"});
-	// }else{
 		BlogPost.find(
 			function(error, document){
-				console.log(document);
 				if(document == null){
 					res.json({failure: 'badToken'});
 				}else{

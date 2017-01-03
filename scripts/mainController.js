@@ -14,11 +14,8 @@ ebBlog.controller('mainController', function($scope, $route, $http, $cookies, $l
 	  };
 	
 	$scope.login = function(){
-		console.log(username);
-		console.log($scope.username);
 		if($scope.username == username && $scope.password == password){
 			$cookies.put('username', $scope.username);
-			console.log('username match');
 			$scope.signedIn();
 		}else{
 			console.log('username not match');
@@ -55,23 +52,9 @@ ebBlog.controller('mainController', function($scope, $route, $http, $cookies, $l
 		});
 	};
 
-	// $scope.getBlogs = function(){
-	// 	$http.get(apiPath + '/getUserData?token=' + $cookies.get('token')).then(function successCallback(response){
-	// 		if (response.data.failure == 'noToken' || response.data.failure == 'badToken'){
-	// 			$location.path('/login');
-	// 			console.log(response.data);
-	// 		} else {
-	// 			$scope.blogPost = response.data.blogPost;
-	// 		}
-	// 	}, function errorCallback(response){
-	// 		console.log(response.status);
-	// 	});
-	// };
-
 	$scope.getBlogs = function(){
 		$http.get(apiPath).then(function successCallback(response){
 			$scope.blogPost = response.data.blogPost;
-			console.log($scope.blogPost);
 		},function errorCallback(response){
 			console.log('error');
 			console.log(response);
@@ -82,7 +65,6 @@ ebBlog.controller('mainController', function($scope, $route, $http, $cookies, $l
 		console.log(results.date);
 		$http.post(apiPath + '/deleteBlog', {
 			results: results,
-			// token: $cookies.get('token')
 		}).then(function successCallback(response){
 			$scope.getBlogs();
 			console.log(response);
